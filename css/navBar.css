@@ -1,0 +1,125 @@
+* {
+    font-family: "Montserrat";
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: #fffbe7;
+}
+
+a {
+    text-decoration: none;
+    font-size: 24px;
+}
+
+header{
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    background-color: #ffef9e;
+}
+
+.navBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position:sticky;
+    padding: 16px 32px;
+    top: 0;
+    background-color: #ffef9e;
+}
+
+.logo img {
+    position: relative;
+    width: 75px;
+    height: 75px;
+    animation: bounceIn 1s 2;
+}
+
+@keyframes bounceIn {
+    0% {
+        filter: opacity(0);
+        transform: translateY(-20px);
+    }
+    35% {
+        filter: opacity(0.25);
+        transform: translateY(0);
+    }
+    70% {
+        filter: opacity(0.5);
+        transform: translateY(-10px);
+    }
+    100% {
+        filter: opacity(1);
+        transform: translateY(0);
+    }
+}
+
+.navigasi > a {
+    float: left;
+    padding: 5px 15px;
+    border: 3px solid #e8ca37;
+    background-color: #ffde3c;
+    color: black;
+    text-decoration: none;
+}
+
+.navigasi > a:hover {
+    background-color: black;
+    color: white;
+}
+
+@media only screen and (max-width: 800px) {
+    .navBar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 716px){
+    .navigasi{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 20px;
+    }
+
+    .navigasi > a {
+        color: black;
+        text-decoration: none;
+    }
+    
+    .navigasi > a:hover {
+        background-color: black;
+        color: white;
+    }
+}
+
+@media only screen and (max-width: 455px) {
+    .navigasi{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        column-gap: 20px;
+    }
+
+    .navBar {
+        display: block;
+        padding: 8px 16px;
+        background-color: #ffef9e;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

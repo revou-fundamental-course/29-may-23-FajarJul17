@@ -4,9 +4,105 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mini Project RevoU</title>
+    <link rel="stylesheet" href="..\29-may-23-FajarJul17\css\index.css">
+    <link rel="stylesheet" href="..\29-may-23-FajarJul17\css\navBar.css">
 </head>
 <body>
-    
+    <header id="Header">
+        <div class="navBar">
+            <div class="logo">
+                <img src="..\29-may-23-FajarJul17\asset\revo.png" alt="Logo">
+            </div>
+            <div class="navigasi">
+                <a href="index.html">Home</a>
+                <a href="profile.html">Our Profile</a>
+                <a href="#">Fortofolio</a>
+                <a href="#">Message Us</a>
+            </div>
+        </div>
+    </header>
+    <section id="welcome">
+        <div class="welcomeSection">
+            <h1> Hi <span id="nameWelcome" if="inputName()"></span> , Welcome To Website</h1>
+            <p>Ini adalah website latihan pertama</p>
+        </div>
+        <div class="welcomeImg">
+            <img src="..\29-may-23-FajarJul17\asset\utama.png" alt="Image Cover" width="1000px">
+        </div>
+    </section>
+    <section id="ourheadquarter">
+        <div class="headquarterHeader">
+            <h1>Our Headquarter</h1>
+        </div>
+        <div class="headquarterDetail">
+            <div class="headquarterDetailItem">
+                <img src="..\29-may-23-FajarJul17\asset\jakarta.jpg" alt="Facilities1">
+                <h2>jakarta</h2>
+            </div>
+            <div class="headquarterDetailItem">
+                <img src="..\29-may-23-FajarJul17\asset\bandung.jpg" alt="Facilities2">
+                <h2>Bandung</h2>
+            </div>
+            <div class="headquarterDetailItem">
+                <img src="..\29-may-23-FajarJul17\asset\surabaya.jpg" alt="Facilities3">
+                <h2>Surabaya</h2>
+            </div>
+        </div>
+    </section>
+    <section id="messageUs">
+        <h1>Message Us</h1>
+        <div class="messageDetail">
+            <div class="inputMessage">
+                <form name="messageForm" onsubmit="onFormSubmit(event)">
+                    <div class="fromGroup">
+                        <div id="input-name" class="input-group">
+                            <label for="input-name">Nama</label>
+                            <input type="text" placeholder="Name" name="name-item" required>
+                        </div>
+                        <div id="input-date" class="input-group">
+                            <label for="date-of-birth">Tanggal lahir</label>
+                            <input type="date" name="date-item" required>
+                        </div>
+                        <div id="input-gender" class="input-group">
+                            <label for="gender">Jenis Kelamin</label>
+                            <div>
+                                <input type="radio" id="male" name="gender-item" value="Laki-laki" required>
+                                <label for="male">Laki-laki</label>
+                                <input type="radio" id="female" name="gender-item" value="Perempuan" required>
+                                <label for="female">Perempuan</label>
+                            </div>
+                        </div>
+                        <div id="input-message" class="input-group">
+                            <label for="message">Pesan</label>
+                            <textarea name="message-item" cols="30" rows="10" required placeholder="Write your message here..."></textarea>
+                        </div>
+                        <div class="button">
+                            <input class="btn" type="submit" value="Submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="outputMessage">
+                <p class="title">Current time</p>
+                <p id="current-time"></p>
+                <p class="title">Nama</p>
+                <p id="sender-full-name"></p>
+                <p class="title">Tanggal Lahir</p>
+                <p id="sender-birth-date"></p>
+                <p class="title">Jenis kelamin</p>
+                <p id="sender-gender"></p>
+                <p class="title">Pesan</p>
+                <p id="sender-messages"></p>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="footerHeader">
+            <h3>Mini Project RevoU</h3>
+            <p>Sebagai bahan latihan saja</p>
+        </div>
+    </footer>
+    <script src="function.js"></script>
 </body>
 </html>
